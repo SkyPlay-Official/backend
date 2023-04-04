@@ -32,17 +32,16 @@ router.post('/', (req, res) => {
 
 // Update a game
 router.put('/:id', (req, res) => {
-    Game.findByIdAndUpdate(req.params.id, req.body, { new: true })
-      .then((game) => res.json(game))
-      .catch((err) => res.status(400).json({ message: 'Error updating game' }));
-  });
-  
-  // Delete a game
-  router.delete('/:id', (req, res) => {
-    Game.findByIdAndRemove(req.params.id)
-      .then((game) => res.json({ message: 'Game deleted' }))
-      .catch((err) => res.status(400).json({ message: 'Error deleting game' }));
-  });
-  
-  module.exports = router;
-  
+  Game.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then((game) => res.json(game))
+    .catch((err) => res.status(400).json({ message: 'Error updating game' }));
+});
+
+// Delete a game
+router.delete('/:id', (req, res) => {
+  Game.findByIdAndRemove(req.params.id)
+    .then((game) => res.json({ message: 'Game deleted' }))
+    .catch((err) => res.status(400).json({ message: 'Error deleting game' }));
+});
+
+module.exports = router;
