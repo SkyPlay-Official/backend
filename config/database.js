@@ -8,7 +8,7 @@ const MONGO_PASSWORD = process.env.MONGO_PASSWORD
 const MONGO_DBNAME = process.env.MONGO_DBNAME
 
 // Define the URL to connect to the Atlas.
-const MongoURL = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_DBNAME}.intflkm.mongodb.net/?retryWrites=true&w=majority`
+const MongoURL = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_DBNAME}.yl1vjlx.mongodb.net/?retryWrites=true&w=majority`
 
 // Function to establis a connection
 const ConnectDB = async () => {
